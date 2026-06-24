@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>
+        DSS-orthesis
+    </title>
+    <link rel="stylesheet" href="styles/dss.css">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5/papaparse.min.js"></script>
+    <script type="module" src="js/dss.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>DSS — Motion Transmission Selection for Dynamic Orthoses</h1>
+        <p>Conceptual design tool, PLA manufacturing material context</p>
+    </header>
+
+
+    <div id="showData"></div>
+
+    <div id="layout">
+        <div class="col-questionnaire">
+            <h1>Questionnaire</h1>
+            <section class="questionnaire">
+
+                <p id="progress-label">0/14 questions answered</p>
+                <div id="progress-bar">
+
+                    <div id="progress-fill"></div>
+
+                </div>
+
+                <h2>PHASE 0 — Manufacturing constraints</h2>
+                <h3>Define what fabrication resources are available.</h3>
+                <p><strong>What manufacturing integration level is available?</strong></p>
+                <p>This determines which archetypes can be considered.</p>
+                <div class="btn-group" data-key="integration_level">
+                    <button class="btn-opt" data-val="fully_printable">Fully printable in PLA (no external
+                        components)</button>
+                    <button class="btn-opt" data-val="simple_components">PLA + simple components (screws, springs,
+                        cables,
+                        pins)</button>
+                    <button class="btn-opt" data-val="complex_components">PLA + complex mechanical components
+                        (bearings,
+                        gears,
+                        actuators)</button>
+
+                </div>
+
+                <h2>SECTION A — Movement context</h2>
+                <h3>Describe the biomechanical movement the orthosis must accommodate.</h3>
+
+                <p><strong>What movement do you want to assist or enable?</strong></p>
+                <p>Describe in terms of osteokinematics.</p>
+                <div class="btn-group" data-key="A1_movement">
+                    <button class="btn-opt" data-val="combination">Combination of movements</button>
+                    <button class="btn-opt" data-val="elevation">Elevation</button>
+                    <button class="btn-opt" data-val="flexion_extension">Flexion / extension</button>
+
+                </div>
+
+                <p><strong>What is the required range of motion (ROM)?</strong></p>
+                <p>Reduced = small arc | Wide = full joint excursion</p>
+                <div class="btn-group" data-key="A2_rom">
+                    <button class="btn-opt" data-val="reduced">Reduced: small arc</button>
+                    <button class="btn-opt" data-val="wide">Wide: full joint excursion</button>
+
+                </div>
+
+                <p><strong>Is the motion uniaxial or multiplanar?</strong></p>
+                <p>Uniaxial = 1 plane, 1 DOF | Multiplanar = multiple planes or coupled DOFs</p>
+                <div class="btn-group" data-key="A3_motion_type">
+                    <button class="btn-opt" data-val="uniaxial">Uniaxial (1 plane)</button>
+                    <button class="btn-opt" data-val="multiplanar">Multiplanar</button>
+
+                </div>
+
+                <h2>SECTION B — Orthosis function</h2>
+                <h3>Define the mechanical role of the orthosis.</h3>
+
+                <p><strong>What is the intended action of the orthosis?</strong></p>
+                <p>This defines the general mechanical behavior the device must perform.</p>
+                <div class="btn-group" data-key="B1_action">
+                    <button class="btn-opt" data-val="assist">Assist the movement</button>
+                    <button class="btn-opt" data-val="resist">Resist the movement</button>
+                    <button class="btn-opt" data-val="guide">Guide the movement along a trajectory</button>
+                    <button class="btn-opt" data-val="return_to_position">Return the segment to initial
+                        position</button>
+                </div>
+
+                <p><strong>Is force or torque generation required?</strong></p>
+                <p>Yes = device must generate/transmit force | No = device mainly guides or constrains</p>
+                <div class="btn-group" data-key="B2_force">
+                    <button class="btn-opt" data-val="yes">Yes</button>
+                    <button class="btn-opt" data-val="no">No</button>
+
+                </div>
+
+                <h2>SECTION C — Technical requirements</h2>
+                <h3>Specify the engineering constraints and performance expectations.</h3>
+
+                <p><strong>What kind of assistance profile is needed?</strong></p>
+                <p>Constant = uniform support | Variable = angle-dependent | Partial = only in part of ROM.</p>
+                <div class="btn-group" data-key="C1_assistance">
+                    <button class="btn-opt" data-val="constant">Constant throughout ROM</button>
+                    <button class="btn-opt" data-val="variable_with_angle">Variable with joint angle</button>
+                    <button class="btn-opt" data-val="partial_range">Only in a partial range of the ROM</button>
+                </div>
+
+                <p><strong>Should the mechanism be based on remote transmission?</strong></p>
+                <p>Yes = remote transmission is required/preferred | No = no, a local or non-remote solution is
+                    preferred.
+                </p>
+                <div class="btn-group" data-key="C2_remote">
+                    <button class="btn-opt" data-val="yes">Yes (remote)</button>
+                    <button class="btn-opt" data-val="no">No (local)</button>
+                </div>
+
+                <p><strong>Is it important to reduce mass in the distal region?</strong></p>
+                <p>Critical for dynamic tasks (gait, repetitive upper-limb) where distal inertia matters.</p>
+                <div class="btn-group" data-key="C3_low_distal_mass">
+                    <button class="btn-opt" data-val="yes">Yes (critical)</button>
+                    <button class="btn-opt" data-val="no">No (not critical)</button>
+                </div>
+
+                <p><strong>What level of adaptability to misalignment is required?</strong></p>
+                <p>High = complex joints, axis migration | Low = well-defined, fixed-axis joints.</p>
+                <div class="btn-group" data-key="C4_adaptability">
+                    <button class="btn-opt" data-val="high">High</button>
+                    <button class="btn-opt" data-val="medium">Medium</button>
+                    <button class="btn-opt" data-val="low">Low</button>
+
+                </div>
+
+                <p><strong>What level of movement precision is required?</strong></p>
+                <p>High = strict trajectory control | Low = functional assistance is sufficient.</p>
+                <div class="btn-group" data-key="C5_precision">
+                    <button class="btn-opt" data-val="high">High</button>
+                    <button class="btn-opt" data-val="low">Low</button>
+
+                </div>
+
+                <p><strong>What type of mechanical movement is expected?</strong></p>
+                <p>Rotation = angular motion | Translation = linear | Combined = both.</p>
+                <div class="btn-group" data-key="C6_movement">
+                    <button class="btn-opt" data-val="rotation">Rotation</button>
+                    <button class="btn-opt" data-val="translation">Translation</button>
+                    <button class="btn-opt" data-val="combined">Combined</button>
+
+                </div>
+
+                <p><strong>What level of design complexity is acceptable?</strong></p>
+                <p>High = advanced mechanisms acceptable | Low = simple, robust, easy to fabricate.</p>
+                <div class="btn-group" data-key="C7_complexity">
+                    <button class="btn-opt" data-val="high">High (acceptable)</button>
+                    <button class="btn-opt" data-val="medium">Medium</button>
+                    <button class="btn-opt" data-val="low">Low (simple)</button>
+                </div>
+
+                <p><strong>What type of actuation is intended?</strong></p>
+                <p>Passive = energy storage/redirection only | Active = motors, actuators, external power.</p>
+                <div class="btn-group" data-key="C8_actuation_type">
+                    <button class="btn-opt" data-val="passive">Passive (no external power)</button>
+                    <button class="btn-opt" data-val="active">Active (external power)</button>
+
+                </div>
+
+                <button id="run-btn" disabled>Run DSS
+                </button>
+                
+
+
+            </section>
+        </div>
+
+        <div class="col-output">
+            <h1>Output</h1>
+            <div id="output"></div>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

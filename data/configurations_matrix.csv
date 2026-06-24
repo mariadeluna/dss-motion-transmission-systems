@@ -1,0 +1,24 @@
+﻿Criteria;"A1
+Cable-pulley / tendon-driven transmission";"A2
+Bowden cable / cable-conduit transmission";"A3
+Elastic cable / spring-assisted transmission";"A4
+Articulated hinge with passive element";"A5
+Flexible shell / leaf-spring / strut mechanism";"A6
+Hybrid rigid-compliant mechanism";"A7
+Spring-loaded linkage / four-bar / parallelogram";"A8
+Cam-spring-cable / variable moment arm mechanism";"A9
+Local rigid rotary transmission";"A10
+Linear-to-rotary transmission";
+Assistance_constant;2;3;1;2;1;2;2;1;3;2;
+Assistance_variable_with_angle;2;2;2;2;2;2;2;3;1;2;
+Assistance_partial_range;1;2;2;3;3;1;2;3;1;1;
+Remote_transmission;3;3;2;1;1;1;1;3;1;1;
+Low_distal_mass_suitability;3;3;3;1;3;2;1;3;1;1;
+Adaptability_to_misalignments;2;2;3;1;2;3;2;2;1;1;
+Motion_precision;2;2;2;3;2;1;3;2;3;3;
+Supports_rotation;2;2;2;3;2;2;3;2;3;3;
+Supports_translation;2;3;2;1;2;2;2;2;1;3;
+Supports_combined_motion;2;2;3;1;2;3;2;2;1;1;
+Active_actuation_compatibility;3;3;2;2;1;3;2;2;3;2;
+Complexity_level;2;2;2;3;2;2;3;1;2;2;
+
