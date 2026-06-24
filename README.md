@@ -1,5 +1,3 @@
-https://mariadeluna.github.io/dss-motion-transmission-systems/
-
   ## Decision-Support Methodology for Conceptual Selection of Motion Transmission Systems in 3D-Printed Dynamic Orthoses
 
   ## Usage
