@@ -1,4 +1,4 @@
-import { loadCSV, MATRIX, ARCHETYPES, CRITERIA } from "./data.js";
+import { loadCSV } from "./data.js";
 import { initUI,showData } from "./ui.js";
 
 document.addEventListener('DOMContentLoaded', async () => {

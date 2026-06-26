@@ -8,11 +8,10 @@
 .col-questionnaire h1,
 .col-output h1 {
     color: #1F3864;
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 12px;
     text-align: center;
     padding-left: 8px;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 header {
@@ -23,18 +22,21 @@ header {
     
 }
 
+header h1 {
+    font-size: 22px;
+    
+}
+
 body {
     padding: 0;
     margin: 0;
     background: #f4f6f9;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 /* SHOW DATA */
 #showData h2 {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 30px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -42,7 +44,6 @@ body {
 #showData table {
     width: 99%;
     border-collapse: collapse;
-    font-size: 20px;
     margin-top: 8px;
     margin-left: 10px;
    }
@@ -72,8 +73,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Segoe UI',  sans-serif;
-    font-size: 18px;
+    
 }
 
 
@@ -95,9 +95,7 @@ body {
     margin-top: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 20px;
+    cursor: pointer;  
 
 }
 
@@ -120,12 +118,11 @@ body {
    margin-left: 30px;
     margin-top: 20px;
 
-    border: 1px solid #ccc;
-    border-radius: 5px;
+      border-radius: 5px;
 
     cursor: pointer;
-    font-family: 'Segoe UI', sans-serif;
-font-size: 20px;
+    
+
 }
 
 #reset-btn:hover {
@@ -146,16 +143,14 @@ font-size: 20px;
     padding: 8px;
 }
 
-#progress-label p {
+#progress-label {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
     margin-right: 20px;
     z-index: 1000;
-    font-size: 20px;
     color: #444;
     line-height: 2;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 #progress-fill {
@@ -165,7 +160,7 @@ font-size: 20px;
     background: #378e2b;
     position: relative;
     overflow: hidden;
-    animation: prog 2s linear;
+   
 }
 
 
@@ -184,36 +179,30 @@ font-size: 20px;
 
 #output h2 {
     color: #1F3864;
-    font-size: 30px;
     margin-top: 20px;
     margin-bottom: 8px;
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 4px;
-    font-family: 'Segoe UI', sans-serif;
+    
 }
 
 #output p {
-    font-size: 20px;
     color: #444;
     line-height: 2;
-    font-family: 'Segoe UI', sans-serif;
+
 }
 
 #output ol {
     padding-left: 20px;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 #output li {
     margin-bottom: 8px;
-    font-size: 20px;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 #output table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 20px;
     margin-top: 8px;
 }
 
@@ -237,7 +226,7 @@ font-size: 20px;
 
 .questionnaire {
     padding-left: 8px;
-    font-family: 'Segoe UI', sans-serif;
+   
 }
 
 
@@ -247,13 +236,12 @@ font-size: 20px;
     border-bottom: 2px solid #2E74B5;
     padding-bottom: 6px;
     margin-top: 28px;
-    font-family: 'Segoe UI', sans-serif;
+    
 }
 
 
 .questionnaire p {
-    font-size: 20px;
     color: #444;
     line-height: 2;
-    font-family: 'Segoe UI', sans-serif;
+    
 }

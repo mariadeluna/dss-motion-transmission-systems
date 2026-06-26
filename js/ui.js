@@ -44,7 +44,7 @@ export function showData() {
 
 
     document.getElementById('showData').innerHTML = `
-    <h2>Configurations matrix</h2>` + tableConfigurations + `<br></br>` +
+    <h2>Configurations matrix</h2>` + tableConfigurations + `<br>` +
         `<h2>PLA matrix</h2>` + tablePLA;
 
 }
@@ -87,7 +87,6 @@ export function initUI() {
     });
     document.getElementById('run-btn').addEventListener('click', () => {
         const result = runDSS(userAnswers);
-        console.log('resultado:', result);
         showResults(result);
     });
     document.getElementById('reset-btn').addEventListener('click', resetQuestionnaire);
@@ -132,7 +131,7 @@ function showResults(result) {
     const output = document.getElementById('output');
 
     output.innerHTML = `
-        <h2> Phase 0 Manufacturing filter<h2>
+        <h2>Phase 0 Manufacturing filter</h2>
 
     <p>Eliminated systems: ${printEliminated}</p>
 

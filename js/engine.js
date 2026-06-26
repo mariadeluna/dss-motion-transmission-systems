@@ -1,5 +1,5 @@
 import { RULES } from './rules.js';
-import { ARCHETYPES, PLA_FILTER, CRITERIA, MATRIX, ARCHETYPE_NAMES } from './data.js';
+import { ARCHETYPES, PLA_FILTER, CRITERIA, MATRIX } from './data.js';
 
 const UPPER_CAP = 3.0;
 const LOWER_CAP = 0.5;
