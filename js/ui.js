@@ -100,11 +100,12 @@ function showResults(result) {
     }
     // Complexity penalty
     let printPenalty = '';
-    if (result.adjustComplexity && result.adjustComplexity.length > 0) {
-        for (const archetype of result.adjustComplexity) {
+    for (const archetype of result.adjustComplexity) {
+        if (result.candidates.includes(archetype)) {
             printPenalty += archetype + ', ';
         }
-    } else {
+    }
+    if (printPenalty === '') {
         printPenalty = 'None';
     }
 
