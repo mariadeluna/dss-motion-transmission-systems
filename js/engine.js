@@ -183,6 +183,7 @@ export function runDSS(userAnswers) {
         candidates, 
         eliminated, 
         excluded,
+        adjustComplexity,
         activatedRules,
         accumulatedMultipliers
     };

@@ -98,6 +98,15 @@ function showResults(result) {
     for (const archetype of result.eliminated) {
         printEliminated += archetype + ', ';
     }
+    // Complexity penalty
+    let printPenalty = '';
+    if (result.adjustComplexity && result.adjustComplexity.length > 0) {
+        for (const archetype of result.adjustComplexity) {
+            printPenalty += archetype + ', ';
+        }
+    } else {
+        printPenalty = 'None';
+    }
 
     // Activated rules
     let printRules = '<ul>';
@@ -137,6 +146,8 @@ function showResults(result) {
 
     <h2>Architectural branching</h2>
     <p>Excluded systems: ${result.excluded.join(', ')}</p>
+     <h2>Complexity penalty (×0.80 on Complexity_level)</h2>
+    <p>Applied to: ${printPenalty}</p>
 
     <h2>Activated rules</h2>
     <p>${printRules}</p>
