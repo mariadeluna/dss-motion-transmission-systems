@@ -43,9 +43,13 @@ export function showData() {
 
 
 
-    document.getElementById('showData').innerHTML = `
-    <h2>Configurations matrix</h2>` + tableConfigurations + `<br>` +
-        `<h2>PLA matrix</h2>` + tablePLA;
+    document.getElementById('showData').innerHTML = `<h1>Data matrices used in the DSS</h1>
+    <h2>Archetype–criteria configuration matrix</h2> 
+    <p>Scores the suitability of each transmission archetype for each evaluation criterion using a 1–3 scale.</p>`
+    + tableConfigurations + `<br>` +
+        `<h2>PLA manufacturing filter matrix</h2> 
+        <p>Defines which archetypes are feasible for each manufacturing integration level, using 1 for eligible candidates and 0 for excluded candidates.</p>`+
+        tablePLA + `<br>`;
 
 }
 
