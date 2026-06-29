@@ -134,7 +134,9 @@ function showResults(result) {
         const id = result.ranking[i][0];
         const score = result.ranking[i][1];
         const name = ARCHETYPE_NAMES[id];
-        printRanking += '<li>' + id + ': ' + name + ' (' + score.toFixed(4) + ')</li>';
+        printRanking += '<li>' + id + ': ' + name + ' (' + score.toFixed(4) + ')' +
+    '<br><img src="./images/' + id + '.jpg" alt="' + name + '" style="max-width:380px; margin-top:6px;" onerror="this.style.display=\'none\'">' +
+    '</li>';
     }
     printRanking += '</ol>';
 
