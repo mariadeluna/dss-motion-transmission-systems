@@ -139,7 +139,7 @@ function showResults(result) {
         const score = result.ranking[i][1];
         const name = ARCHETYPE_NAMES[id];
         printRanking += '<li>' + id + ': ' + name + ' (' + score.toFixed(4) + ')' +
-    '<br><img src="./images/' + id + '.jpg" alt="' + name + '" style="max-width:380px; margin-top:6px;" onerror="this.style.display=\'none\'">' +
+    '<br><img src="./images/' + id + '.jpg" alt="' + name + '" style="max-width:400px; margin-top:6px; margin-left: 450px;" onerror="this.style.display=\'none\'">' +
     '</li>';
     }
     printRanking += '</ol>';
