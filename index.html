@@ -19,7 +19,7 @@
     </header>
 
 
-    
+
 
     <div id="layout">
         <div class="col-questionnaire">
@@ -36,8 +36,9 @@
                 <h2>PHASE 0 — Manufacturing constraints</h2>
                 <h3>Select the manufacturing resources available for the design.</h3>
                 <p><strong>What manufacturing integration level is available?</strong></p>
-                <p>Fully printable = no additional components <br> Simple components = screws, springs, cables, elastic bands, pins, etc <br>
-                Complex components = bearings, gears, actuators, Bowden cables, etc</p>
+                <p>Fully printable = no additional components <br> Simple components = screws, springs, cables, elastic
+                    bands, pins, etc <br>
+                    Complex components = bearings, gears, actuators, Bowden cables, etc</p>
                 <div class="btn-group" data-key="integration_level">
                     <button class="btn-opt" data-val="fully_printable">Fully printable in PLA</button>
                     <button class="btn-opt" data-val="simple_components">PLA + simple components</button>
@@ -51,7 +52,7 @@
                 <h2>SECTION A — Movement context</h2>
                 <h3>Define the movement that the orthosis must perform.</h3>
 
-                <p><strong>What movement do you want to assist or enable?</strong></p>
+                <p><strong>What type of movement is needed to assist or enable?</strong></p>
                 <p>Select the main movement of the anatomical segment.</p>
                 <div class="btn-group" data-key="A1_movement">
                     <button class="btn-opt" data-val="combination">Combination of movements</button>
@@ -125,7 +126,8 @@
                 </div>
 
                 <p><strong>What level of adaptability to misalignment is required?</strong></p>
-                <p>High = needs to tolerate misalignment <br> Medium = some misalignment is tolerated, it is not critical <br>
+                <p>High = needs to tolerate misalignment <br> Medium = some misalignment is tolerated, it is not
+                    critical <br>
                     Low = little misalignment is expected, mechanism is expected to behave as a fixed axis</p>
                 <div class="btn-group" data-key="C4_adaptability">
                     <button class="btn-opt" data-val="high">High</button>
@@ -152,14 +154,17 @@
                 </div>
 
                 <p><strong>What level of design complexity is acceptable?</strong></p>
-                <p>High = advanced mechanisms acceptable | Low = simple, robust, easy to fabricate.</p>
+                <p> High = advanced mechanisms acceptable; specialized components, precise assembly or additional
+                    adjustment are acceptable. <br>
+                    Medium = moderate complexity acceptable; some additional components or assembly steps are allowed.<br>
+                    Low = simple, robust, easy to fabricate.</p>
                 <div class="btn-group" data-key="C7_complexity">
                     <button class="btn-opt" data-val="high">High (acceptable)</button>
                     <button class="btn-opt" data-val="medium">Medium</button>
                     <button class="btn-opt" data-val="low">Low (simple)</button>
                 </div>
 
-                <p><strong>What type of actuation is intended?</strong></p>
+                <p><strong>What type of actuation approach will be used?</strong></p>
                 <p>Passive = energy storage/redirection only | Active = motors, actuators, external power.</p>
                 <div class="btn-group" data-key="C8_actuation_type">
                     <button class="btn-opt" data-val="passive">Passive (no external power)</button>
@@ -169,7 +174,7 @@
 
                 <button id="run-btn" disabled>Run DSS
                 </button>
-                
+
 
 
             </section>
@@ -177,13 +182,13 @@
 
         <div class="col-output">
             <h1>Output</h1>
-            <div id="output"></div>            
+            <div id="output"></div>
             <button id="reset-btn">Reset</button>
-            
+
         </div>
     </div>
-    
-            <div id="showData"></div>
+
+    <div id="showData"></div>
 
 </body>
 
